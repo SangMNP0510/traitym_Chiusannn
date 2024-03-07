@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+    <label for="width">Chiều rộng:</label>
+    <input type="text" id="widthInput">
+    <br>
+    <label for="height">Chiều cao:</label>
+    <input type="text" id="heightInput">
+    <br>
+    <button onclick="calculateArea()">Tính diện tích</button>
+    <br>
+    <div id="result"></div>
+
+    <script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        getWidth() {
+            return this.width;
+       }
+
+        setWidth(width) n{
+            this.width = width;
+        }
+
+        getHeight() {
+            return this.height;
+        }
+        setHeight(height) {
+            this.height = height;
+        }
+
+        calculateArea() {
+            if (isNaN(this.width) || isNaN(this.height) || this.width <= 0 || this.height <= 0) {
+                throw "Giá trị không hợp lệ. Vui lòng nhập các số dương.";
+            }
+
+            return this.width * this.height;
+       }
+    }
+
+    function calculateArea() {
+        var widthInput = document.getElementById("widthInput");
+        var heightInput = document.getElementById("heightInput");
+        var resultDiv = document.getElementById("result");
+        try {
+            var width = +widthInput.value;
+            var height = +heightInput.value;
+
+            if (isNaN(width) || isNaN(height) || width <= 0 || height <= 0) {
+                throw "Giá trị không hợp lệ. Vui lòng nhập các số dương.";
+            }
+
+            var rectangle = new Rectangle(width, height);
+            var area = rectangle.calculateArea();
+
+            resultDiv.innerHTML = "Chiều rộng: " + rectangle.getWidth() + "<br>";
+            resultDiv.innerHTML += "Chiều cao: " + rectangle.getHeight() + "<br>";
+            resultDiv.innerHTML += "Diện tích: " + area.toFixed(2);
+        } catch (error) {
+            resultDiv.innerHTML = "Lỗi: " + error;
+        }
+    }
+    </script>
+</body>
+</html>
