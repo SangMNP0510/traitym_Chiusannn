@@ -1,0 +1,181 @@
+footer {
+    background: #2BBCFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer a:hover {
+    color: #5e7081;
+}
+
+footer h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+}
+
+footer h2 {
+    font-size: 28px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    text-align: start;
+    margin-left: 5px;
+    color: white;
+}
+
+.container {
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi cần */
+    padding: 0 20px; /* Thêm padding để tránh dính mép */
+}
+
+.footer-content {
+    width: 30%; /* Mỗi cột chiếm 30% trên màn hình lớn */
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
+    padding: 10px;
+}
+
+.footer-content p {
+    width: 320px;
+    padding: 7px;
+    text-align: start;
+    color: white;
+    font-size: 16px;
+}
+
+.footer-content ul {
+    text-align: center;
+    padding: 0;
+}
+
+.list {
+    padding: 0;
+}
+
+.list li {
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 7px;
+    position: relative;
+    color: #ffffff;
+}
+
+.list a {
+    font-size: 19px;
+}
+
+.list li::before {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition-duration: 0.5s;
+}
+
+.list li:hover::before {
+    width: 70px;
+}
+
+.social-icons {
+    text-align: center;
+    padding: 0;
+    height: 25px;
+}
+
+.social-icons li {
+    display: inline-block;
+    text-align: center;
+    padding: 15px;
+}
+
+.bottom-bar {
+    background: #2BBCFF;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+.bottom-bar p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 20px;
+    padding: 7px;
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 900px) { /* Khi "Email" chạm "Truy cập nhanh" */
+    .container {
+        flex-direction: column; /* Chuyển sang bố cục dọc */
+        align-items: center; /* Căn giữa các phần tử */
+        width: 100%; /* Đảm bảo container chiếm toàn bộ chiều rộng */
+    }
+
+    .footer-content {
+        width: 100%; /* Mỗi cột chiếm toàn bộ chiều rộng */
+        margin-bottom: 20px; /* Khoảng cách giữa các cột khi xếp dọc */
+    }
+
+    .footer-content p {
+        width: 100%; /* Đảm bảo đoạn văn chiếm toàn bộ chiều rộng */
+        text-align: center; /* Căn giữa văn bản trên màn hình nhỏ */
+    }
+
+    .footer-content ul {
+        padding: 0;
+        margin: 0 auto; /* Căn giữa danh sách */
+    }
+
+    .footer-content:nth-child(1) h2 { /* Ẩn chữ "Library" trong cột đầu tiên */
+        display: none;
+    }
+
+    .list li {
+padding: 5px; /* Giảm padding trên màn hình nhỏ */
+    }
+
+    .social-icons li {
+        padding: 10px; /* Giảm padding cho biểu tượng xã hội */
+    }
+
+    .bottom-bar {
+        margin-top: 20px; /* Giảm margin-top trên màn hình nhỏ */
+    }
+    footer h2{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-content h3 {
+        font-size: 20px; /* Giảm kích thước tiêu đề trên màn hình rất nhỏ */
+    }
+
+    .footer-content p {
+        font-size: 14px; /* Giảm kích thước chữ trên màn hình rất nhỏ */
+    }
+
+    .list a {
+        font-size: 16px; /* Giảm kích thước liên kết */
+    }
+
+    .bottom-bar p {
+        font-size: 16px; /* Giảm kích thước chữ bottom-bar */
+    }
+}

@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.menu li {
+    position: relative;
+}
+
+.box-submenu {
+    display: none;
+    position: absolute;
+    top: 200%;
+    left: 0;
+    background-color: #F2EBEB;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.box-submenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.box-submenu ul li {
+    padding: 10px;
+    
+}
+
+.box-submenu ul li a {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.box-submenu ul li a:hover {
+    background-color: #D9D9D9;
+    color: #000000;
+}
+
+.menu li:hover .box-submenu {
+    display: block;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solidrgb(0, 0, 0)c;
+    min-width: 35px;
+    z-index: 1;
+    top: 100%;
+    left: 30%;
+    right: -30%;
+}
+
+.auth-buttons:hover .dropdown {
+    display: block;
+}
+
+.dropdown a {
+    display: block;
+    padding: 9px;
+    text-decoration: none;
+    color: black;
+    border-radius: 0;
+
+}
+.dropdown a:hover {
+    background-color:  #D9D9D9;
+    color: black;
+}
+.dropdown i {
+    margin-right: 5px ;
+}

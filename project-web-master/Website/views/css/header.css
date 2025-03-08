@@ -1,0 +1,289 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #2BBCFF;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    position: relative;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+header .banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo svg {
+    margin-left: 0;
+    margin-right: 10px;
+    width: 40px; /* Kích thước gốc của logo */
+}
+
+header .system-name {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav__pc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-left: 35px;
+}
+
+.menu .fa {
+    margin-right: 6px;
+}
+
+.menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 25px 20px 19px 20px;
+    transition: background 0.3s;
+}
+
+.menu2 a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    background: #1C80AF;
+    color: #f4f4f4;
+}
+
+.auth-buttons {
+    display: flex;
+    margin-right: 40px;
+    position: relative;
+}
+
+.auth-buttons a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-size: 13px;
+}
+
+.auth-buttons a:hover {
+    background: #1C80AF;
+    color: #f4f4f4;
+}
+
+.auth-buttons p {
+    display: flex;
+}
+
+.auth-buttons svg {
+    height: 33px;
+    margin-right: -11px;
+    padding: 0;
+}
+
+.Bell-button {
+    display: flex;
+    margin-right: 40px;
+    position: relative;
+}
+
+/* Mobile nav */
+.nav__bars-btn {
+    width: 50px;
+    color: #f4f4f4;
+    display: none;
+    cursor: pointer;
+}
+
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.3);
+    display: none;
+    animation: fadeIn linear 0.2s;
+}
+
+.nav__mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    height: auto;
+    max-width: 100%;
+    background-color: #f4f4f4;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform linear 0.2s, opacity linear 0.2s;
+}
+
+.menu-mobile {
+    margin-top: 24px;
+    list-style: none;
+}
+
+.nav__mobile-link {
+    text-decoration: none;
+    display: block;
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+.nav__mobile-link a {
+    color: #000000;
+}
+
+.nav__mobile-link i {
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.nav__mobile-close {
+    cursor: pointer;
+}
+
+.nav__mobile-close svg {
+    width: 28px;
+    height: 28px;
+    margin-left: 270px;
+    margin-top: 20px;
+}
+
+.nav_input:checked ~ .nav__overlay {
+    display: block;
+}
+
+.nav_input:checked ~ .nav__mobile {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .nav__bars-btn {
+        display: block;
+    }
+    header .banner {
+        flex-direction: row;
+        padding: 10px 0;
+    }
+    header .menu {
+        display: none;
+    }
+    header .auth-buttons {
+        display: none;
+    }
+    header .logo svg {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .banner {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    header .logo {
+        order: 1;
+    }
+    header .nav__bars-btn {
+        order: 2;
+    }
+    header .system-name {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 580px) {
+    header {
+        padding: 5px 10px; /* Giảm padding để header nhỏ hơn */
+    }
+    header .banner {
+        flex-direction: row; /* Giữ logo và bars-btn ngang hàng */
+        align-items: center;
+        justify-content: space-between;
+    }
+    header .logo svg {
+        width: 30px; /* Giảm kích thước logo */
+        margin-right: 5px;
+    }
+    header .system-name {
+        font-size: 18px; /* Giảm font-size của "Library" */
+    }
+    .nav__bars-btn {
+        width: 40px; /* Giảm kích thước dấu 3 gạch */
+    }
+    
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px 10px;
+    }
+    header .banner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header .logo {
+        margin-bottom: 0;
+    }
+    header .logo svg {
+        margin-right: 5px;
+        width: 30px;
+    }
+    header .system-name {
+        font-size: 16px; /* Giảm thêm font-size ở kích thước rất nhỏ */
+    }
+    .nav__bars-btn {
+        width: 35px; /* Giảm thêm kích thước bars-btn */
+    }
+    .auth-buttons svg {
+        height: 25px;
+    }
+    .auth-buttons a {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,184 @@
+main {
+  padding: 20px 0;
+}
+
+main .banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  overflow: hidden; /* Ngăn ảnh tràn ra ngoài */
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  max-height: 300px; /* Giới hạn chiều cao tối đa để tránh tràn */
+}
+
+.container {
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 20px;
+  max-width: 1140px; /* Giới hạn chiều rộng tối đa */
+}
+
+.content-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.news, .stats {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  min-width: 0;
+}
+
+.news h2 {
+  color: #0066cc;
+  margin-bottom: 10px;
+}
+
+.stats {
+  background-color: #ffe6f0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.stats h2 {
+  color: #0066cc;
+  margin-bottom: 10px;
+}
+
+.stats-columns {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.top-column {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+}
+
+.top-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.book-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.book-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.book-count {
+  font-weight: normal;
+}
+
+.top-1 {
+  background-color: #ff4040;
+  height: 200px;
+}
+
+.top-2 {
+  background-color: #ff8c00;
+  height: 160px;
+}
+
+.top-3 {
+  background-color: #ffff40;
+  height: 120px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .content-row {
+      flex-direction: column;
+  }
+
+  .news, .stats {
+      width: 100%;
+  }
+
+  .stats-columns {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .top-1 {
+      order: 1;
+  }
+  .top-2 {
+      order: 2;
+  }
+  .top-3 {
+      order: 3;
+  }
+
+  .top-column {
+      width: 100%;
+      min-height: 100px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .banner {
+      height: 80px;
+  }
+
+  .banner-image {
+      object-fit: cover;
+      max-height: 150px; /* Đảm bảo ảnh không tràn */
+  }
+
+  .news, .stats {
+      padding: 10px;
+  }
+
+  .top-column {
+      min-height: 80px; /* Giảm chiều cao tối thiểu trên màn hình nhỏ */
+  }
+
+  .top-label {
+      font-size: 14px;
+  }
+
+  .book-title {
+      font-size: 14px;
+  }
+
+  .book-count {
+      font-size: 12px;
+  }
+}

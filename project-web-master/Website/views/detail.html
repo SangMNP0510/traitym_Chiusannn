@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Khách hàng</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/detail.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="banner">    
+            <div class="logo">
+                <a href="">     
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 512 512"><path d="M160 96a96 96 0 1 1 192 0A96 96 0 1 1 160 96zm80 152l0 264-48.4-24.2c-20.9-10.4-43.5-17-66.8-19.3l-96-9.6C12.5 457.2 0 443.5 0 427L0 224c0-17.7 14.3-32 32-32l30.3 0c63.6 0 125.6 19.6 177.7 56zm32 264l0-264c52.1-36.4 114.1-56 177.7-56l30.3 0c17.7 0 32 14.3 32 32l0 203c0 16.4-12.5 30.2-28.8 31.8l-96 9.6c-23.2 2.3-45.9 8.9-66.8 19.3L272 512z"/></svg>
+                </a>
+            </div>
+            <div class="system-name">Library</div>
+            <nav class="nav__pc">
+                <ul class="menu">
+                    <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Trang chủ</a></li>
+                    <li><a href="#"><i class="fa fa-users" aria-hidden="true"></i>Về chúng tôi</a></li>
+                    <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>Thư viện sách</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <svg width="55" height="60" viewBox="0 0 55 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_52_26)">
+                            <path d="M27.5 30C31.6677 30 35.6647 28.4196 38.6117 25.6066C41.5587 22.7936 43.2143 18.9782 43.2143 15C43.2143 11.0218 41.5587 7.20644 38.6117 4.3934C35.6647 1.58035 31.6677 0 27.5 0C23.3323 0 19.3353 1.58035 16.3883 4.3934C13.4413 7.20644 11.7857 11.0218 11.7857 15C11.7857 18.9782 13.4413 22.7936 16.3883 25.6066C19.3353 28.4196 23.3323 30 27.5 30ZM21.8895 35.625C9.79688 35.625 0 44.9766 0 56.5195C0 58.4414 1.63281 60 3.64621 60H51.3538C53.3672 60 55 58.4414 55 56.5195C55 44.9766 45.2031 35.625 33.1105 35.625H21.8895Z" fill="black"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_52_26">
+                                <rect width="55" height="60" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <a href="#"> Tên tài khoản </a>  
+                    <div class="dropdown">
+                        <a href="#"><i class="fa fa-id-card" aria-hidden="true"></i>Thông tin cá nhân</a>
+                        <a href="#"><i class="fa fa-history" aria-hidden="true"></i>Lịch sử mượn trả</a>
+                        <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng xuất</a>
+                    </div>    
+                </div>
+            </nav>
+        </div>            
+    </header>
+    <main>
+        <div class="book-card">
+            <div class="book-content">
+                <img src="./img/shopping.webp" alt="Book Cover" class="book-cover">
+                <div class="book-info">
+                    <h1>Tên Cuốn Sách</h1>
+                    <p><strong>Tác giả:</strong> Tên Tác Giả</p>
+                    <p><strong>Thể loại:</strong> Văn học</p>
+                    <p><strong>Năm xuất bản:</strong> 2023</p>
+                    <p><strong>Mô tả:</strong> Đây là một cuốn sách tuyệt vời kể về hành trình khám phá bản thân của nhân vật chính.</p>
+                    <button class="borrow-btn">Mượn sách</button>
+                    <div class="rating">
+                        <h3>Đánh giá sách:</h3>
+                        <div class="stars">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                        <p class="rating-result">Điểm trung bình: <span>0/5</span> </p>
+                        <div class="comment-section">
+                            <h4>Bình luận của bạn</h4>
+                            <textarea class="comment-input" placeholder="Viết bình luận của bạn về cuốn sách này..."></textarea>
+                            <button class="submit-comment-btn">Gửi bình luận</button>
+                            <div class="comment-list"></div>
+                            <button class="show-more-btn">Xem thêm</button>
+                            <button class="show-less-btn" style="display: none;">Thu gọn</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 512 512"><path d="M160 96a96 96 0 1 1 192 0A96 96 0 1 1 160 96zm80 152l0 264-48.4-24.2c-20.9-10.4-43.5-17-66.8-19.3l-96-9.6C12.5 457.2 0 443.5 0 427L0 224c0-17.7 14.3-32 32-32l30.3 0c63.6 0 125.6 19.6 177.7 56zm32 264l0-264c52.1-36.4 114.1-56 177.7-56l30.3 0c17.7 0 32 14.3 32 32l0 203c0 16.4-12.5 30.2-28.8 31.8l-96 9.6c-23.2 2.3-45.9 8.9-66.8 19.3L272 512z"/></svg>
+            </div>
+            <div class="footer-content">
+                <h2>Library</h2>
+                <p>Email: maimeodethuong123@gmail.com</p>
+                <p>Phone: 0911.111.111</p>
+                <p>Address: Tòa Landmark 81, số 208 đường Nguyễn Hữu Cảnh, phường 22, quận Bình Thạnh, Thành phố Hồ Chí Minh.</p>
+            </div>
+            <div class="footer-content">
+                <h3>Truy cập nhanh</h3>
+                <ul class="list">
+                    <li><a href="">Trang chủ</a></li>
+                    <li><a href="">Về chúng tôi</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Theo dõi chúng tôi</h3>
+                <ul class="social-icons">
+                    <li><a href=""><img src="./img/Facebook.svg" alt="Facebook" class="social-icons"></a></li>
+                    <li><a href=""><img src="./img/Instagram.svg" alt="Instagram" class="social-icons"></a></li>
+                    <li><a href=""><img src="./img/Twitter.svg" alt="Twitter" class="social-icons"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>© 2025 Hệ thống thư viện Library. Bảo lưu mọi quyền.</p>
+        </div>
+    </footer>
+    <script src="./js/detail.js"></script>
+</body>
+</html>

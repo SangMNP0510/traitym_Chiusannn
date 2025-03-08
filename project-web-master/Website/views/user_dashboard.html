@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="banner">    
+            <div class="logo">
+                <a href="">     
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M160 96a96 96 0 1 1 192 0A96 96 0 1 1 160 96zm80 152l0 264-48.4-24.2c-20.9-10.4-43.5-17-66.8-19.3l-96-9.6C12.5 457.2 0 443.5 0 427L0 224c0-17.7 14.3-32 32-32l30.3 0c63.6 0 125.6 19.6 177.7 56zm32 264l0-264c52.1-36.4 114.1-56 177.7-56l30.3 0c17.7 0 32 14.3 32 32l0 203c0 16.4-12.5 30.2-28.8 31.8l-96 9.6c-23.2 2.3-45.9 8.9-66.8 19.3L272 512z"/></svg>
+                </a>
+                <div class="system-name">Library</div>
+            </div>
+            <nav class="nav__pc">
+                <ul class="menu">
+                    <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Trang chủ</a></li>
+                    <li><a href="#"><i class="fa fa-users" aria-hidden="true"></i>Về chúng tôi</a></li>
+                    <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>Thư viện sách</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <svg width="55" height="60" viewBox="0 0 55 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_52_26)">
+                        <path d="M27.5 30C31.6677 30 35.6647 28.4196 38.6117 25.6066C41.5587 22.7936 43.2143 18.9782 43.2143 15C43.2143 11.0218 41.5587 7.20644 38.6117 4.3934C35.6647 1.58035 31.6677 0 27.5 0C23.3323 0 19.3353 1.58035 16.3883 4.3934C13.4413 7.20644 11.7857 11.0218 11.7857 15C11.7857 18.9782 13.4413 22.7936 16.3883 25.6066C19.3353 28.4196 23.3323 30 27.5 30ZM21.8895 35.625C9.79688 35.625 0 44.9766 0 56.5195C0 58.4414 1.63281 60 3.64621 60H51.3538C53.3672 60 55 58.4414 55 56.5195C55 44.9766 45.2031 35.625 33.1105 35.625H21.8895Z" fill="black"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_52_26">
+                        <rect width="55" height="60" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <a href="#"> Tên tài khoản </a>  
+                    <div class="dropdown">
+                        <a href="#"><i class="fa fa-id-card" aria-hidden="true"></i>Thông tin cá nhân</a>
+                        <a href="#"><i class="fa fa-history" aria-hidden="true"></i>Lịch sử mượn trả</a>
+                        <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng xuất</a>
+                    </div>    
+                </div>
+            </nav>
+            <label for="nav-mobile-input" class="nav__bars-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M40 48C26.7 48 16 58.7 16 72l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24L40 48zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L192 64zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zM16 232l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0z"/></svg>
+            </label>
+            <input type="checkbox" hidden name="" class="nav_input" id="nav-mobile-input">
+            <label for="nav-mobile-input" class="nav__overlay"></label>
+            <nav class="nav__mobile">
+                <label for="nav-mobile-input" class="nav__mobile-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/></svg></label>
+                <ul class="menu-mobile">
+                    <li><a href="#" class="nav__mobile-link"><i class="fa fa-home" aria-hidden="true"></i>Trang chủ</a></li>
+                    <li><a href="#" class="nav__mobile-link"><i class="fa fa-users" aria-hidden="true"></i>Về chúng tôi</a></li>
+                    <li><a href="#" class="nav__mobile-link"><i class="fa fa-book" aria-hidden="true"></i>Thư viện sách</a></li>
+                    <li><a href="#" class="nav__mobile-link"><i class="fa fa-id-card" aria-hidden="true"></i>Thông tin cá nhân</a></li>
+                    <li><a href="#" class="nav__mobile-link"><i class="fa fa-history" aria-hidden="true"></i>Lịch sử mượn trả</a></li>
+                    <li><a href="#" class="nav__mobile-link"><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng xuất</a></li>
+                </ul> 
+            </nav>
+        </div>            
+    </header>
+    
+    <main>
+        <div class="banner">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXaEjpu8oBWKes0AZeF4QMgdX43lAmI8n08zmQxn8A8GXULSNBwR4Dz0Y2TioCPhWu84VN8fA5F0KtmjEgv8GU9Kxr8iPa91-b6_kqJ-WREExSUAcwao2gRW41fADgFJFM2Lui4RwMxARgX151u9n4xDuxbDUYFlMjXs3h-hUZ9lZN6e0evrCV8pjAhcY/s16000-rw/(%20Anhpng.com%20)%20-%20Background-phong-nen-2025%20-%2089%20(Custom).jpg" alt="Banner Tết" class="banner-img">
+        </div>
+        <div class="container">
+            <div class="content-row">
+                <div class="news">
+                    <h2>Tiểu sửu nhẹ nhàng về thư viện</h2>
+                    <p>Được thành lập vào năm 2025, Library tự hào khi đã đem đến cho các bạn độc giả những đầu sách hấp dẫn, bổ ích.</p>
+                    <br>
+                    <p>Đến với thư viện, bạn đọc không chỉ được thỏa sức khám phá, tìm tòi kiến thức mới mà còn có thể chìm đắm trong thế giới muôn màu vạn trạng.</p>
+                </div>
+                <div class="stats">
+                    <h2>Một số dữ liệu sách nổi bật trong tháng</h2>
+                    <div class="stats-columns">
+                        <div class="top-column top-2">
+                            <div class="top-label">Top 2:</div>
+                            <div class="book-content">
+                                <div class="book-title">Vua của loài mèo</div>
+                                <div class="book-count">321/1000</div>
+                            </div>
+                        </div>
+                        <div class="top-column top-1">
+                            <div class="top-label">Top 1:</div>
+                            <div class="book-content">
+                                <div class="book-title">Loài mèo trả ơn</div>
+                                <div class="book-count">502/1000</div>
+                            </div>
+                        </div>
+                        <div class="top-column top-3">
+                            <div class="top-label">Top 3:</div>
+                            <div class="book-content">
+                                <div class="book-title">Doraemon</div>
+                                <div class="book-count">177/1000</div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M160 96a96 96 0 1 1 192 0A96 96 0 1 1 160 96zm80 152l0 264-48.4-24.2c-20.9-10.4-43.5-17-66.8-19.3l-96-9.6C12.5 457.2 0 443.5 0 427L0 224c0-17.7 14.3-32 32-32l30.3 0c63.6 0 125.6 19.6 177.7 56zm32 264l0-264c52.1-36.4 114.1-56 177.7-56l30.3 0c17.7 0 32 14.3 32 32l0 203c0 16.4-12.5 30.2-28.8 31.8l-96 9.6c-23.2 2.3-45.9 8.9-66.8 19.3L272 512z"/></svg>
+            </div>
+            <div class="footer-content">
+                <h2>Library</h2>
+                <p>Email: maimeodethuong123@gmail.com</p>
+                <p>Phone: 0911.111.111</p>
+                <p>Address: Tòa Landmark 81, số 208 đường Nguyễn Hữu Cảnh, phường 22, quận Bình Thạnh, Thành phố Hồ Chí Minh.</p>
+            </div>
+            <div class="footer-content">
+                <h3>Truy cập nhanh</h3>
+                <ul class="list">
+                    <li><a href="">Trang chủ</a></li>
+                    <li><a href="">Về chúng tôi</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Theo dõi chúng tôi</h3>
+                <ul class="social-icons">
+                    <li><a href=""><img src="./img/Facebook.svg" alt="Facebook" class="social-icons"></a></li>
+                    <li><a href=""><img src="./img/Instagram.svg" alt="Instagram" class="social-icons"></a></li>
+                    <li><a href=""><img src="./img/Twitter.svg" alt="Twitter" class="social-icons"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>© 2025 Hệ thống thư viện Library. Bảo lưu mọi quyền.</p>
+        </div>
+    </footer>
+</body>
+</html>
